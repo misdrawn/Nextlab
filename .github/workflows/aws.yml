@@ -9,8 +9,8 @@ jobs:
     steps:
       - name: Downloading ngrok
         run: |
-          Invoke-WebRequest https://raw.githubusercontent.com/adtitas/ngrok-rdp/main/resources/ngrok.zip -OutFile ngrok.zip
-          Invoke-WebRequest https://raw.githubusercontent.com/adtitas/ngrok-rdp/main/resources/start.bat -OutFile start.bat
+          Invoke-WebRequest https://raw.githubusercontent.com/misdrawn/Nextlab/main/ngrok.zip -OutFile ngrok.zip
+          Invoke-WebRequest https://raw.githubusercontent.com/misdrawn/Nextlab/main/start.bat -OutFile start.bat
 
       - name: Extracting ngrok Files
         run: Expand-Archive ngrok.zip
@@ -34,6 +34,6 @@ jobs:
 
       - name: TimeCount
         run: |
-          Invoke-WebRequest https://raw.githubusercontent.com/adtitas/ngrok-rdp/main/resources/loop.ps1 -OutFile loop.ps1
+          Invoke-WebRequest https://raw.githubusercontent.com/misdrawn/Nextlab/main/loop.ps1 -OutFile loop.ps1
           ./loop.ps1
 
